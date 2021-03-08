@@ -2,61 +2,70 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My personal website</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <header>
+  <body class="body-grid">
+    <header class="header-grid">
       <h1>Johan Dynnesen</h1>
-      <nav>
-        <ul>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-      </nav>
-      <img
-        width="400"
-        height="280"
-        src="images/_J7A3931 1 copy.jpg"
-        alt="A photo of Johan"
-      />
-      <section>
-        <h2>Things I am interested in</h2>
-        <ul>
-          <li>Music</li>
-          <li>Web development</li>
-          <li>Cooking</li>
-          <li>Traveling</li>
-        </ul>
-      </section>
+      <ul class="navigation">
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </header>
-    <main>
-      <section id="contact">
-        <h2>Contact</h2>
-        <ul>
-          <li>Phone: +4527387866</li>
-          <li>Email: johandynnesen@gmail.com</li>
-        </ul>
-      </section>
-      <section>
-        <a href="https://github.com/johdyn" target="_blank"
-          ><img width="70" height="50" src="images/GitHub_Logo.png"
-        /></a>
-        <a href=""
-          ><img width="50" height="50" src="images/linkedin logo.webp"
-        /></a>
-        <a href=""
-          ><img width="50" height="50" src="images/Codepen_Logo.png"
-        /></a>
-      </section>
-      <section>
+    <main class="main-grid">
+      <div class="flex-image">
+        <section class="main-section1">
+          <img
+            class="image-profile header-section1"
+            src="images/_J7A3931 1 copy.jpg"
+            alt="A photo of Johan"
+          />
+        </section>
+        <section class="main-section2">
+          <h2>Things I am interested in</h2>
+          <ul>
+            <li>Music</li>
+            <li>Web development</li>
+            <li>Traveling</li>
+          </ul>
+        </section>
+      </div>
+      <div class="flex-contact">
+        <section class="main-section3" id="contact">
+          <h2 class="main-section3-contact">Contact</h2>
+          <ul class="contact-element">
+            <li class="contact-item1">Phone: +4527387866</li>
+            <li class="contact-item2">Email: johandynnesen@gmail.com</li>
+          </ul>
+        </section>
+        <section class="main-section4 flex-logo">
+          <a href="https://github.com/johdyn" target="_blank"
+            ><img class="logo-item1" src="images/GitHub_Logo.png"
+          /></a>
+          <a href=""
+            ><img class="logo-item2" src="images/linkedin logo.webp"
+          /></a>
+          <a href=""
+            ><img class="logo-item3" src="images/Codepen_Logo.png"
+          /></a>
+        </section>
+      </div>
+      <section class="main-section5">
         <h2 id="about">About</h2>
         <p>
-          Johan is a Danish drummer and composer, living in
-          <strong>Cologne, Germany.</strong> <br />He is currently studying web
-          development with Neue Fische.
+          I am a Danish musician, living in
+          <strong>Cologne</strong>, and currently studying web development with
+          Neue Fische.
         </p>
       </section>
-      <section>
+      <section class="main-section6">
         <h2>CV</h2>
         <ul>
           <li>
@@ -70,6 +79,9 @@
         </ul>
       </section>
     </main>
-    <footer>© Johan Dynnesen 2021</footer>
+    <footer class="footer-grid flex-footer">
+      <div>Johan Dynnesen</div>
+      <div>2021</div>
+    </footer>
   </body>
 </html>
