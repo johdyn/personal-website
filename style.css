@@ -5,11 +5,11 @@
 body {
   font-family: "Merriweather", serif;
   font-size: 14px;
-  background-color: rgb(200, 223, 223);
+  background-color: rgb(125, 185, 185);
 }
 
 h1 {
-  text-align: left;
+  text-align: center;
   font-style: italic;
   text-decoration: underline;
 }
@@ -21,7 +21,7 @@ p {
 .body-grid {
   display: grid;
   grid-template-rows: 140px auto 100px;
-  padding: 16px;
+  grid-template-columns: 80px auto 80px;
 }
 
 .header-grid {
@@ -33,10 +33,20 @@ p {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
 
+.contact-container {
+  display: flex;
+  justify-content: 
+  flex-flow: row wrap;
+}
+
+.contact-item2 {
+  align-self: flex-end;
+}
 .footer-grid {
   grid-row: 3 / 4;
   grid-column: 2 / 3;
@@ -105,7 +115,22 @@ p {
   background: #1565c0;
 }
 
+@media (min-width: 800px) {
+  .image-profile {
+    width: 300px;
+  }
+}
+
 @media all and (max-width: 800px) {
+  .image-profile {
+    width: 200px;
+  }
+
+  .main-grid {
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
   .navigation {
     justify-content: space-around;
   }
@@ -120,10 +145,14 @@ p {
     justify-content: right;
     padding: 0;
   }
+.main-grid {
+  grid-template-rows: 140px auto auto;
+}
 
-  .image-profile {
-    width: 100px;
-  }
+
+.main-section2 li:nth-of-type(2)::before {
+  content: " Responsive "
+}
 
   /*.header-section2 {
     grid-column: 1 / 2;
@@ -155,9 +184,8 @@ p {
 }
 
 .image-profile {
-  width: 300px;
   border-style: ridge;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .flex-logo {
